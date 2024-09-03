@@ -1,13 +1,13 @@
 from confluent_kafka import Consumer, KafkaError
 
 conf = {
-    "bootstrap.servers": "localhost:9092",
-    "group.id": "lessa",
-    "auto.offset.reset": "earliest",
+    'bootstrap.servers': 'localhost:9092',
+    'group.id': 'lessa',
+    'auto.offset.reset': 'earliest',
 }
 
 consumer = Consumer(**conf)
-consumer.subscribe(["first_topic"])
+consumer.subscribe(['first_topic'])
 
 # consuming messages
 while True:
