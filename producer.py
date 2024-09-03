@@ -5,6 +5,8 @@ conf = {"bootstrap.servers": "localhost:9092"}
 
 producer = Producer(**conf)
 
+key = 0
+
 
 def delivery_report(err, msg):
     if err is not None:
@@ -12,16 +14,6 @@ def delivery_report(err, msg):
     else:
         print(f"Mensagem entregue a {
               msg.topic()} [Partição: {msg.partition()}]")
-
-
-# for i in range(10):
-#     producer.produce(
-#         "first_topic",
-#         key=str(i),
-#         value=f"message {i}",
-#         callback=delivery_report,
-#     )
-key = 0
 
 
 def send_message():
