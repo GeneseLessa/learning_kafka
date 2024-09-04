@@ -16,12 +16,12 @@ def delivery_report(err, msg):
 
 
 def send_message(key=0):
-    key += 1
-
     message = input('Digite a sua mensagem: ')
 
     if message == 'sair':
         return
+
+    key += 1
 
     producer.produce(
         'first_topic', key=str(key), value=message, callback=delivery_report
