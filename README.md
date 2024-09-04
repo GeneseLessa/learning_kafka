@@ -11,3 +11,5 @@ $ docker compose up -d
 ```
 
 Em seguida, basta rodar os scripts consumer.py e producer.py.
+
+Este projeto tem como objetivo o incremento gradual, de modo a evoluir ele pra algo que ainda estou pensando no quê. Por hora um pequeno chat tá de bom tamanho.
