@@ -23,8 +23,6 @@ while True:
             print(msg.error())
             break
 
-    breakpoint()
-
     print(f'Recebeu a mensagem: {msg.value().decode("utf-8")}')
 
 consumer.close()
