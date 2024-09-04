@@ -30,4 +30,6 @@ def send_message(key=0):
     send_message(key)
 
 
+send_message()
+
 producer.flush()
